@@ -32,17 +32,11 @@ analyzing their functionality.
 - **displayChoice()** -> Displays the menu options
 
 ## Explanation of the code
-The customer support ticket system uses four data structures to manage tickets efficiently.
-**SinglyLinkedList** is used to store the ticket records dynamically.It allows fast insertion 
-and supports deletion and search by ticket ID.
-**Stack** implements undo functionality.Every added ticket is pushed onto the stack,and the last
-ticket can be removed using pop().This follows the LIFO principle.
-**Priority Queue** handles urgent tickets by sorting them based on priority.Tickets with lower
-priority numbers are processed first.
-**Circular Queue** manages round-robin ticket processing.It uses modular arithmetic to wrap
-around the array,ensuring fair and continuous ticket handling.
-**Polynomial Linked List** is used to represent billing history,storing terms with coefficients
-and exponents.It supports insertion in sorted order and displays the billing polynomial.
+The **Singly Linked List** is used to store ticket records dynamically. It allows tickets to be added and removed without needing to shift elements, making it ideal for maintaining a flexible and expandable list of customer issues. Each ticket node contains essential details such as ticket ID, customer name, issue description, and priority level, and the list can be traversed to search for specific tickets based on ID.
+To support undo operations, the system uses a **Stack**, which follows the Last-In-First-Out (LIFO) principle. Every time a ticket is added, a copy is pushed onto the stack. If the user decides to undo the last operation, the system pops the most recent ticket from the stack and removes it from the linked list. This structure ensures that the most recent changes can be reversed quickly and accurately.
+Urgent tickets are managed using a **Priority Queue**, which automatically arranges tickets based on their priority level. Tickets with lower numerical priority values are processed before others. This helps simulate real-world customer support workflows, where critical issues must be addressed before general inquiries.
+The system also includes a **Circular Queue** to handle round-robin ticket processing. This queue uses a fixed-size array and modular arithmetic to wrap around when the end is reached, allowing continuous and fair ticket handling. It is particularly useful for distributing tickets evenly among support agents or processing them in a time-sliced manner.
+Lastly, the **Polynomial Linked List** is used to represent billing history. Each node in this list contains a coefficient and exponent, forming terms of a polynomial expression. The system inserts these terms in descending order of exponent, maintaining a sorted structure. This allows users to view and compare billing records in a clear mathematical format, especially when only a few items have non-zero charges.
 
 ## Time Complexity
 - **insertTicket()** -> O(1)
@@ -74,11 +68,11 @@ and exponents.It supports insertion in sorted order and displays the billing pol
 <img width="586" height="536" alt="Screenshot (68)" src="https://github.com/user-attachments/assets/748d51ec-7273-4d7b-8cd8-2643ade5cd89" />
 
 ## Student Details
-**Name** : Sidharth Krishna S
-**Roll No** : 2401720003
-**Course** : BSc Computer Science
-**Semester** : 3rd Semester
-**Assignment** : Lab Assignment 2
+- **Name** : Sidharth Krishna S
+- **Roll No** : 2401720003
+- **Course** : BSc Computer Science
+- **Semester** : 3rd Semester
+- **Assignment** : Lab Assignment 2
 
 ## GitHub Link
 - C++ Code -> https://github.com/SidharthBScCS/Customer-Support-Ticket-System/blob/main/TicketSystem.cpp
